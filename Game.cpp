@@ -1,11 +1,14 @@
 #include <SFML/Graphics.hpp>
+#include<iostream>
+#include <filesystem>
 
 int main() {
+    std::cout << "Current path: " << std::filesystem::current_path() << std::endl;
     sf::RenderWindow window(sf::VideoMode(800, 600), "マリオ風ゲーム");
     sf::Texture texture;
-    if (!texture.loadFromFile("resources/mario.png")) {
+    /*if (!texture.loadFromFile("resources/mario.png")) {
         return -1;
-    }
+    }*/
     sf::Sprite sprite(texture);
     sprite.setPosition(100.f, 100.f);
 
