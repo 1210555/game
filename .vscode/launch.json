@@ -1,0 +1,27 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug Game",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/Game.cpp",  // 実行ファイルのパス
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "externalConsole": true,
+      "MIMode": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ],
+      "miDebuggerPath": "C:/msys64/ucrt64/bin/gdb.exe",  // GDBのパス
+      "preLaunchTask": "build",  // ビルドタスクを指定
+      "logging": { "moduleLoad": false }
+    }
+  ]
+}
